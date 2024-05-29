@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "221965234208",
+    "project_id": "yapmessenger-647f4",
+    "storage_bucket": "yapmessenger-647f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:221965234208:android:9c2de19b40987bef52cc45",
+        "android_client_info": {
+          "package_name": "com.example.yap"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjrlCpQimEOHRI9UTecNzzUqUboHAXSg0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
