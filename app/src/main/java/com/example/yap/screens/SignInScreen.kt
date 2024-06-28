@@ -68,12 +68,13 @@ fun SignInScreen(mAuth: FirebaseAuth?, onSignUpClicked: () -> Unit, onLoginSucce
                             } else {
                                 val exception = signInTask.exception
                                 when (exception) {
-                                    is FirebaseAuthInvalidCredentialsException -> {
-                                        Toast.makeText(context, "Invalid password. Please try again.", Toast.LENGTH_LONG).show()
-                                    }
                                     is FirebaseAuthInvalidUserException -> {
+                                        // Email does not exist, redirect to sign up
                                         Toast.makeText(context, "Email not found, redirecting to sign up", Toast.LENGTH_LONG).show()
                                         onSignUpClicked()
+                                    }
+                                    is FirebaseAuthInvalidCredentialsException -> {
+                                        Toast.makeText(context, "Invalid Email or password. Please try again.", Toast.LENGTH_LONG).show()
                                     }
                                     else -> {
                                         Toast.makeText(context, "Sign In Failed: ${exception?.message}", Toast.LENGTH_LONG).show()
